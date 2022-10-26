@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.content {
+    background-color: #f3eae3;
+}
+
+.card {
+    
+}
+
+.card__info {
+    height: 450px;
+    padding: 30px;
+    background-color: #fff;
+}
+
+.card__info .card__info--type {
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #70768F;
+    font-size: 12px;
+}
+
+.card__info .card__info--title {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.card__info .card__info--des {
+    padding: 30px 0;
+    font-size: 14px;
+    color: #70768F;
+    line-height: 24px;
+}
+
+.card__info .card__price {
+    color: #3d8168;
+    font-size: 36px;
+    height: 50px;
+    text-align: left;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.card__info span {
+    display: inline-block;
+    vertical-align: middle;
+    color: #70768F;
+    font-size: 14px;
+    margin:auto;
+    text-decoration: line-through;
+    padding-left: 10px;
+    height: 25px;
+}
+
+.btn {
+    background-color: #3d8168;
+    color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    font-weight: 700;
+}
+
+.btn--active:hover, .btn--active:active {
+    background-color: #1a4031;
+    cursor: pointer;
+}
+
+/* Desktop Screen  */
+@media screen and (min-width: 1440px) {
+    .content {
+        min-width: 1440px;
+        min-height: 800px;
+        position: relative;
+    }
+
+    .card {
+        width: 600px;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .card .card__image--desktop {
+        float: left;
+        width: 300px;
+        border-radius: 12px 0px 0px 12px;
+    }
+    
+    .card .card__image--mobile {
+        display: none;
+    }
+
+    .card__info {
+        display: inline-block;
+        width: 300px;
+        border-radius: 0px 12px 12px 0px;
+    }
+}
+
+/* Mobile Screen  */
+@media screen and (max-width: 1440px) {
+    .content {
+        width: auto;
+        height: auto;
+    }
+
+    .card {
+        padding: 20px 14px;
+        width: 100%;
+    }
+
+    .card .card__image--desktop {
+        display: none;
+    }
+    
+    .card .card__image--mobile {
+        width: 100%;
+        display: block;
+        border-radius: 12px 12px 0px 0px;
+    }
+
+    .card__info {
+        border-radius: 0px 0px 12px 12px;
+    }
+
+}
+
